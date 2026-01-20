@@ -1,0 +1,64 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+    # --- SERVICE 1: Database (MySQL) ---
+    db:
+        image: mysql:8.0
+        container_name: audiophile_db
+        restart: always
+        environment:
+            # Database credentials
+            MYSQL_DATABASE: audiophile
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_PASSWORD: secret
+            MYSQL_USER: audiophile
+        ports:
+            - '3306:3306' # External port : Internal container port
+        networks:
+            - app-network
+        volumes:
+            - db-data:/var/lib/mysql # Persist data volume
+
+    # --- SERVICE 2: Backend (Laravel/PHP) ---
+    api:
+        build:
+            context: ./api # Context pointing to 'api' directory
+            dockerfile: Dockerfile
+        container_name: audiophile_api
+        restart: unless-stopped
+        working_dir: /var/www
+        volumes:
+            - ./api:/var/www # Sync local directory with container
+        depends_on:
+            - db # Wait for database to start
+        ports:
+            - '8000:8000'
+        networks:
+            - app-network
+
+    # --- SERVICE 3: Frontend (Next.js/Node) ---
+    client:
+        build:
+            context: ./client # Context pointing to 'client' directory
+            dockerfile: Dockerfile
+        container_name: audiophile_client
+        restart: always
+        ports:
+            - '3000:3000' # Accessible via localhost:3000
+        volumes:
+            - ./client:/app # Sync local directory
+            # - /app/node_modules # Prevent node_modules conflict
+        networks:
+            - app-network
+        stdin_open: true # Keep stdin open for interactive mode
+        tty: true
+
+# Internal network for container communication
+networks:
+    app-network:
+        driver: bridge
+
+# Named volume for database persistence
+volumes:
+    db-data:
