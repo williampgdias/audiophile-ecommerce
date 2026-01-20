@@ -1,13 +1,12 @@
-import Hero from '@/components/home/Hero';
+// import Hero from '@/components/home/Hero';
+import HeroScrollVideo from '@/components/home/HeroScrollVideo';
+import CategoryShop from '@/components/shared/CategoryShop';
 
 export default function Home() {
     return (
         <main>
-            <Hero />
-
-            <div className="h-screen flex items-center justify-center bg-white text-black">
-                <p>Rest of the content goes here...</p>
-            </div>
+            <HeroScrollVideo />
+            <CategoryShop />
         </main>
     );
 }
