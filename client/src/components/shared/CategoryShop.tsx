@@ -6,19 +6,19 @@ const categories = [
         id: 1,
         title: 'Headphones',
         href: '/category/headphones',
-        image: '/assets/home/desktop/category-shop-01.png',
+        image: '/assets/shared/desktop/category-shop-01.png',
     },
     {
         id: 2,
         title: 'Speakers',
         href: '/category/speakers',
-        image: '/assets/home/desktop/category-shop-02.png',
+        image: '/assets/shared/desktop/category-shop-02.png',
     },
     {
         id: 3,
         title: 'Earphones',
         href: '/category/earphones',
-        image: '/assets/home/desktop/category-shop-03.png',
+        image: '/assets/shared/desktop/category-shop-03.png',
     },
 ];
 
@@ -28,7 +28,7 @@ export default function CategoryShop() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md-gap-4 lg:gap-8">
                 {categories.map((cat) => (
                     <div key={cat.id} className="relative group">
-                        <div className="bg-light-gray rounded-lg pt-20 pb-8 flex flex-col items-center justify-center relative mt-12 h-41.25 lg:h-51 hover:bg-primary/10 transition-colors duration-300">
+                        <div className="bg-light-gray rounded-lg pt-20 pb-8 flex flex-col items-center justify-center relative mt-12 h-[200px] lg:h-[240px] hover:bg-primary/10 transition-colors duration-300">
                             <div className="absolute -top-12 lg:-top-16 w-32 h-32 lg:w-40 lg:h-30 group-hover:-translate-y-2 transition-transform duration-300">
                                 <Image
                                     src={cat.image}

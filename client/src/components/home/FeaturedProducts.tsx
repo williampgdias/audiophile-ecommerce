@@ -25,20 +25,21 @@ export default function FeaturedProducts() {
                     </svg>
                 </div>
 
-                <div className="relative z-10 w-full h-75 lg:w-full lg:h-1/2">
+                <div className="relative z-10 w-full h-75 lg:w-1/2 lg:h-full">
                     <Image
-                        src="/assets/home/desktop/zx9-speaker.jpg"
+                        src="/assets/home/desktop/zx9-speaker-02.png"
                         alt="ZX9 Speaker"
                         fill
+                        quality={100}
                         className="object-cover"
                     />
                 </div>
 
-                <div className="relative z-10 w-full lg:1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left text-white py-12 px-6 lg:p-16">
+                <div className="relative z-10 w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left text-white py-12 px-6 lg:p-16">
                     <h2 className="text-4xl md:text-[56px] font-bold uppercase leading-none tracking-[2px] mb-6">
                         ZX9 <br /> Speaker
                     </h2>
-                    <p className="text-white/75 text-[15px] leading-relaxed mb-10">
+                    <p className="text-white/75 text-[15px] leading-relaxed mb-10 max-w-87.5">
                         Upgrade to premium speakers that are phenomenally built
                         to deliver truly remarkable sound.
                     </p>
@@ -51,23 +52,24 @@ export default function FeaturedProducts() {
                 </div>
             </div>
 
-            <div className="relative rounded-lg overflow-hidden h-80 flex items-center px-6 md:px-16 lg:px-24">
+            <div className="relative rounded-lg overflow-hidden h-80 md:h-100 lg:h-120 flex items-center px-6 md:px-16 lg:px-24">
                 <div className="absolute inset-0 w-full h-full z-0">
                     <Image
-                        src="/assets/home/desktop/image-speaker-zx7.jpg"
+                        src="/assets/home/desktop/yx1-earphones-final-03.png"
                         alt="ZX7 Speaker Background"
                         fill
+                        quality={100}
                         className="object-cover"
                     />
                 </div>
 
                 <div className="relative z-10">
-                    <h2 className="text-[28px] text-white font-bold uppercase tracking-[2px] mb-8">
+                    <h2 className="text-[32px] font-bold uppercase tracking-[2px] mb-8">
                         ZX7 Speaker
                     </h2>
                     <Link
                         href="/product/zx7-speaker"
-                        className="inline-block bg-transparent border border-white hover:bg-black hover:text-white text-white font-bold text-[13px] uppercase px-8 py-4 tracking-[1px] transition-colors"
+                        className="inline-block bg-transparent border border-white hover:bg-black hover:text-white font-bold text-[14px] uppercase px-8 py-4 tracking-[1px] transition-colors"
                     >
                         See Product
                     </Link>
@@ -75,16 +77,17 @@ export default function FeaturedProducts() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-7.5 lg:gap-7.5">
-                <div className="relative h-50 md:h-80 rounded-lg overflow-hidden">
+                <div className="relative h-62.5 md:h-100 lg:h-120 rounded-lg overflow-hidden">
                     <Image
-                        src="/assets/home/desktop/yx1-earphones_.png"
+                        src="/assets/home/desktop/yx1-earphones-final-02.png"
                         alt="YX1 Earphones"
                         fill
+                        quality={100}
                         className="object-cover"
                     />
                 </div>
 
-                <div className="bg-light-gray rounded-lg flex flex-col justify-center px-6 md:px-10 lg:px-24 h-50 md:h-80">
+                <div className="bg-[#F1F1F1] rounded-lg flex flex-col justify-center px-6 md:px-10 lg:px-24 h-62.5 md:h-100 lg:h-120">
                     <h2 className="text-[28px] font-bold uppercase tracking-[2px] mb-8 text-black">
                         YX1 Earphones
                     </h2>
