@@ -3,6 +3,7 @@ import { Manrope } from 'next/font/google';
 import './globals.css';
 
 import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 const manrope = Manrope({
     subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({
             <body className={manrope.className} suppressHydrationWarning={true}>
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     );
