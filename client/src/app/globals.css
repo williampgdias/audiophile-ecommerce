@@ -9,7 +9,7 @@ body {
 
 @layer utilities {
     .container-custom {
-        @apply w-[90%] max-w-[1600px] mx-auto px-4 md:px-8;
+        @apply w-[90%] max-w-400 mx-auto px-4 md:px-8;
     }
 
     .animate-fade-in-up {
